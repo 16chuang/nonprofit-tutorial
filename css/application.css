@@ -1,0 +1,50 @@
+/************************************
+************** GENERAL **************
+*************************************/
+body {
+    background-color: #f1eeee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div {
+    background-color: white;
+    text-align: center;
+    padding: 60px 120px;
+    margin: 10px 6%;
+}
+
+/************************************
+************** HEADER ***************
+*************************************/
+div#header {
+    height: 72px;
+    padding: 0;
+    text-align: left;
+}
+
+header {
+    background: white url("../img/color-header.png") no-repeat;
+    background-size: contain;
+}
+
+header img#logo {
+    margin-top: 18px;
+    margin-left: 1.5%;
+    
+    height: 46px;
+    width: 190px;
+}
+
+/************************************
+*************** TEXT ****************
+*************************************/
+h1 {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
