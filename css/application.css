@@ -9,7 +9,7 @@ body {
 div {
     background-color: white;
     text-align: center;
-    padding: 60px 120px;
+    padding: 60px 9%;
     margin: 10px 6%;
 }
 
@@ -24,7 +24,7 @@ div#header {
 
 header {
     background: white url("../img/color-header.png") no-repeat;
-    background-size: contain;
+    background-size: 100% 10px;
 }
 
 header img#logo {
@@ -36,15 +36,20 @@ header img#logo {
 }
 
 /************************************
+************** NAV BAR **************
+*************************************/
+
+
+/************************************
 *************** TEXT ****************
 *************************************/
 h1 {
     font-weight: 600;
     font-size: 3em;
+    padding: 0;
 }
 
 h2 {
     font-weight: 300;
     font-size: 1.5em;
 }
-
