@@ -4,6 +4,7 @@
 body {
     background-color: #f1eeee;
     font-family: 'Open Sans', sans-serif;
+    color: #262626;
 }
 
 div {
@@ -38,7 +39,23 @@ header img#logo {
 /************************************
 ************** NAV BAR **************
 *************************************/
+div#nav {
+    padding-right: 1%;
+    padding-left: 1%;
+}
 
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li li {
+    display: block;
+}
 
 /************************************
 *************** TEXT ****************

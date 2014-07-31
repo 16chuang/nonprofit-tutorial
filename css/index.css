@@ -1,0 +1,43 @@
+/************************************
+************ INTRO VIDEO ************
+*************************************/
+
+/* VIDEO BACKGROUND CONTAINER */
+div#intro-video-background {
+    background: white url("../img/flat-macbook.jpg") no-repeat;
+    background-position: center;    
+    background-size: contain;
+    
+    width: 70%;
+    height: 0;
+    padding-bottom: 43.61328125%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* VIDEO CONTAINER */
+div#intro-video-container{
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+	padding-bottom: 55%; /* video aspect ratio to fit macbook picture */
+	padding-top: 0px;
+	height: 0;
+    width: 88%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* EMBEDDED VIDEO */
+div#intro-video-container iframe {
+    position: absolute;
+	top: -9%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
