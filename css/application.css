@@ -4,6 +4,8 @@
 body {
     background-color: #f1eeee;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
     color: #262626;
 }
 
@@ -11,7 +13,7 @@ div {
     background-color: white;
     text-align: center;
     padding: 60px 9%;
-    margin: 10px 6%;
+    margin: 15px 6%;
 }
 
 /************************************
@@ -40,21 +42,55 @@ header img#logo {
 ************** NAV BAR **************
 *************************************/
 div#nav {
-    padding-right: 1%;
-    padding-left: 1%;
+    padding: 0;
 }
 
+/* LINK */
+nav a {
+    text-decoration: none;
+    color: #a5a5a5;
+}
+
+nav a.nav-selected, nav a:hover {
+    color: #262626;
+}
+
+nav a.nav-selected li, nav a:hover li {
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+
+/* COLORS */
+nav li.nav-blue {
+    border-bottom-color: #46a4c0;
+}
+
+nav li.nav-green {
+    border-bottom-color: #9fbe40;
+}
+
+nav li.nav-yellow {
+    border-bottom-color: #ffc500;
+}
+
+nav li.nav-red {
+    border-bottom-color: #c3404c;
+}
+
+/* LIST STYLING */
 nav ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 nav li {
     display: inline-block;
+    padding: 2% 1%;
 }
 
-nav li li {
-    display: block;
+nav .number {
+    font-size: 2em;
 }
 
 /************************************
@@ -62,11 +98,12 @@ nav li li {
 *************************************/
 h1 {
     font-weight: 600;
-    font-size: 3em;
+    font-size: 3.2em;
     padding: 0;
 }
 
 h2 {
     font-weight: 300;
     font-size: 1.5em;
+    line-height: 150%;
 }
