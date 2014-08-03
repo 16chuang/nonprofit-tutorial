@@ -4,6 +4,42 @@
         <link rel="stylesheet" href="css/application.css">
         <link rel="stylesheet" href="css/index.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <script type='text/javascript'>
+        //<![CDATA[
+            $(function() {
+                // Stick the #nav to the top of the window
+                var nav = $('#nav');
+                var navHomeY = nav.offset().top;
+                var isFixed = false;
+                var $w = $(window);
+                $w.scroll(function() {
+                    var scrollTop = $w.scrollTop();
+                    var shouldBeFixed = scrollTop > navHomeY;
+                    if (shouldBeFixed && !isFixed) {
+                        nav.css({
+                            position: 'fixed',
+                            top: 0,
+                            left: nav.offset().left,
+                            width: nav.width(),
+                            boxShadow: '0px 2px 10px #E0E0E0'
+                        });
+                        isFixed = true;
+                    }
+                    else if (!shouldBeFixed && isFixed)
+                    {
+                        nav.css({
+                            position: 'static',
+                            boxShadow: 'none'
+                        });
+                        isFixed = false;
+                    }
+                });
+            });
+        //]]> 
+        </script>
+        
     </head>
     
     <body>
@@ -28,50 +64,69 @@
         </div>
         
         <!-- NAVIGATION BAR -->
-        <div id="nav">
-            <nav>
-                <ul>
-                    <a href="index.html" class="nav-selected">
-                        <li class="nav-blue">
-                            <span class="number">1</span> <br>
-                            <span>Getting Started</span>                            
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="nav-green">
-                            <span class="number">2</span> <br>
-                            <span>Navigate Your Account</span>                            
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="nav-yellow">
-                            <span class="number">3</span> <br>
-                            <span>Create an Opportunity</span>                            
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="nav-yellow">
-                            <span class="number">4</span> <br>
-                            <span>Prepare for Opportunity</span>                            
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="nav-yellow">
-                            <span class="number">5</span> <br>
-                            <span>After the Opportunity</span>                            
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li class="nav-red">
-                            <span class="number">6</span> <br>
-                            <span>Other Features</span>                            
-                        </li>
-                    </a>
-                </ul>
-            </nav>
+        <div id="nav-wrap">
+            <div id="nav">
+                <nav>
+                    <ul>
+                        <a href="index.html" class="nav-selected">
+                            <li class="nav-blue">
+                                <span class="number">1</span> <br>
+                                <span>Getting Started</span>                            
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="nav-green">
+                                <span class="number">2</span> <br>
+                                <span>Navigate Your Account</span>                            
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="nav-yellow">
+                                <span class="number">3</span> <br>
+                                <span>Create an Opportunity</span>                            
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="nav-yellow">
+                                <span class="number">4</span> <br>
+                                <span>Prepare for Opportunity</span>                            
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="nav-yellow">
+                                <span class="number">5</span> <br>
+                                <span>After the Opportunity</span>                            
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="nav-red">
+                                <span class="number">6</span> <br>
+                                <span>Other Features</span>                            
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
         </div>
         
-        <div></div>
+        <div id="tutorial-structure">
+            <h3>Tutorial Structure</h3>
+            <h4>Let’s quickly go over the structure of this tutorial.</h4>
+            <h5>(If you’re itching to get started, scroll to the bottom of the page.</h5>
+            <p>We’ll begin the tutorial by learning how to find your way around your new account and the GoVo site.</p>
+            <p>Then we’ll dive straight into the volunteer opportunity posting process from start to finish.</p>
+            <p>Finally, we’ll end with an overview of the exciting features GoVoluntr gives you access to.</p>
+        </div>
+        
+        <div id="pages">
+            <h3>Pages</h3>
+            <p>Each webpage in this tutorial presents a distinct and coherent set of topics. You can track your progress through pages on the top floating menu. You can advance through these pages via the menu, or by just following the links at the bottom right of each page.</p>
+        </div>
+        
+        <div id="sections">
+            <h3>Sections</h3>
+            <p>Each individual webpage is further sectioned into steps. You can track your progress through these sections on the right side of the page. You can access these sections by simply scrolling through the page.</p>
+        </div>
         
     </body>
 </html>

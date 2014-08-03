@@ -41,7 +41,13 @@ header img#logo {
 /************************************
 ************** NAV BAR **************
 *************************************/
+div#nav-wrap {
+    height: 114px;
+    padding: 0;
+}
+
 div#nav {
+    margin: 0;
     padding: 0;
 }
 
@@ -60,7 +66,7 @@ nav a.nav-selected li, nav a:hover li {
     border-bottom-style: solid;
 }
 
-/* COLORS */
+/* BORDER COLORS */
 nav li.nav-blue {
     border-bottom-color: #46a4c0;
 }
@@ -96,6 +102,7 @@ nav .number {
 /************************************
 *************** TEXT ****************
 *************************************/
+/* PAGE HEADER -- bold, big */
 h1 {
     font-weight: 600;
     font-size: 3.2em;
@@ -106,4 +113,13 @@ h2 {
     font-weight: 300;
     font-size: 1.5em;
     line-height: 150%;
+}
+
+/* DIV TITLES -- thin, small, caps, underlined */
+h3 {
+    font-weight: 300;
+    font-size: 1em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: left;
 }
