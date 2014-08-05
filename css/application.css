@@ -42,60 +42,86 @@ header img#logo {
 ************** NAV BAR **************
 *************************************/
 div#nav-wrap {
-    height: 114px;
     padding: 0;
+    height: 114px;
+    display: hidden;
 }
 
+/* NORMAL SIZE NAV */
 div#nav {
     margin: 0;
     padding: 0;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
 }
 
+/*
+#nav ul, #nav li {
+    height: 114px;
+    transition: all 300ms;
+}
+*/
+
+/* REDUCED SIZE NAV */
+.nav-smaller span.number, .nav-smaller br{
+    display: none;
+    /*
+    line-height: 0;
+    font-size: 0em;
+*/
+}
+
+/*
+.nav-smaller ul, .nav-smaller li {
+    height: 71px;
+}
+*/
+
 /* LINK */
-nav a {
+#nav a {
     text-decoration: none;
     color: #a5a5a5;
 }
 
-nav a.nav-selected, nav a:hover {
+#nav a.nav-selected, nav a:hover {
     color: #262626;
 }
 
-nav a.nav-selected li, nav a:hover li {
+#nav a.nav-selected li, nav a:hover li {
     border-bottom-width: 5px;
     border-bottom-style: solid;
 }
 
 /* BORDER COLORS */
-nav li.nav-blue {
+#nav li.nav-blue {
     border-bottom-color: #46a4c0;
 }
 
-nav li.nav-green {
+#nav li.nav-green {
     border-bottom-color: #9fbe40;
 }
 
-nav li.nav-yellow {
+#nav li.nav-yellow {
     border-bottom-color: #ffc500;
 }
 
-nav li.nav-red {
+#nav li.nav-red {
     border-bottom-color: #c3404c;
 }
 
 /* LIST STYLING */
-nav ul {
+#nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav li {
+#nav li {
     display: inline-block;
     padding: 2% 1%;
 }
 
-nav .number {
+#nav .number {
     font-size: 2em;
 }
 
