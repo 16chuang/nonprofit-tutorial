@@ -31,7 +31,8 @@
                         isFixed = true;
                         nav.addClass('nav-smaller');
                         
-                        navWrap.css({ backgroundColor: '#f1eeee' });
+                        navWrap.css({ height: '71px' });
+                        navWrap.addClass('nav-smaller');
                     }
                     else if (!shouldBeFixed && isFixed)
                     {
@@ -42,7 +43,8 @@
                         });
                         isFixed = false;
                         nav.removeClass('nav-smaller');
-                        navWrap.css({ backgroundColor: 'white' });
+                        navWrap.removeClass('nav-smaller');
+                        navWrap.css({ height: '114px' });
                     }
                 });
             });
@@ -67,7 +69,7 @@
             <h2>We’re excited to have you on board! This tutorial series will teach you how to navigate your new non-profit account and how to post opportunities on GoVo. Once you finish, you’ll be well on your way to do-goodr stardom!</h2>
             <div id="intro-video-background">
                 <div id="intro-video-container">
-<!--                    <iframe src="//player.vimeo.com/video/80691618?color=9fbe40"  width="500" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+<!--                    <iframe src="//player.vimeo.com/video/80691618?title=0&amp;byline=0&amp;portrait=0&amp;color=9fbe40"  width="500" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
                 </div>
             </div>
         </div>
@@ -119,7 +121,7 @@
         <div id="tutorial-structure">
             <h3>Tutorial Structure</h3>
             <h4>Let’s quickly go over the structure of this tutorial.</h4>
-            <h5>(If you’re itching to get started, scroll to the bottom of the page.</h5>
+            <h5>(If you’re itching to get started, scroll to the bottom of the page.)</h5>
             <p>We’ll begin the tutorial by learning how to find your way around your new account and the GoVo site.</p>
             <p>Then we’ll dive straight into the volunteer opportunity posting process from start to finish.</p>
             <p>Finally, we’ll end with an overview of the exciting features GoVoluntr gives you access to.</p>
@@ -134,6 +136,18 @@
             <h3>Sections</h3>
             <p>Each individual webpage is further sectioned into steps. You can track your progress through these sections on the right side of the page. You can access these sections by simply scrolling through the page.</p>
         </div>
+        
+        <footer>
+            <div id="left-button" class="blank-button">
+            </div>
+            <div id="right-button" class="green-button">
+                <a href="page-2.html">
+                    <img src="img/right-footer-arrow.png" class="footer-arrow">
+                    <span>Navigate Your Account</span>
+                </a>
+            </div>
+        </footer>
+        
         
     </body>
 </html>
