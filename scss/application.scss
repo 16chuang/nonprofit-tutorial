@@ -1,3 +1,5 @@
+@import 'colors';
+
 /************************************
 ************** GENERAL **************
 *************************************/
@@ -7,11 +9,11 @@ html, body {
 }
 
 body {
-    background-color: #f1eeee;
+    background-color: $background-gray;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1em;
-    color: #262626;
+    color: $text-gray;
 }
 
 div {
@@ -24,23 +26,22 @@ div {
 /************************************
 ************** HEADER ***************
 *************************************/
-div#header {
+header {
     height: 72px;
     padding: 0;
     text-align: left;
-}
-
-header {
+    margin: 15px 6%;
+    
     background: white url("../img/color-header.png") no-repeat;
     background-size: 100% 10px;
-}
-
-header img#logo {
-    margin-top: 18px;
-    margin-left: 1.5%;
     
-    height: 46px;
-    width: 190px;
+    img#logo {
+        margin-top: 18px;
+        margin-left: 1.5%;
+
+        height: 46px;
+        width: 190px;
+    }
 }
 
 /************************************
@@ -50,7 +51,7 @@ div#nav-wrap {
     padding: 0;
     height: 114px;
     display: hidden;
-    background-color: #f1eeee;
+    background-color: $background-gray;
     transition: all 300ms;
 }
 
@@ -79,33 +80,33 @@ span.number, br {
 /* COLORING AND BORDER W/ OR W/O HIGHLIGHT */
 #nav a {
     text-decoration: none;
-    color: #a5a5a5;
+    color: $text-light-gray;
 }
 
 #nav a.nav-selected, #nav a:hover {
-    color: #262626;
-}
-
-#nav a.nav-selected li, #nav a:hover li {
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
+    color: $text-gray;
+    
+    li {
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+    }
 }
 
 /* BORDER COLORS */
 #nav li.nav-blue {
-    border-bottom-color: #46a4c0;
+    border-bottom-color: $text-blue;
 }
 
 #nav li.nav-green {
-    border-bottom-color: #9fbe40;
+    border-bottom-color: $text-green;
 }
 
 #nav li.nav-yellow {
-    border-bottom-color: #ffc500;
+    border-bottom-color: $text-yellow;
 }
 
 #nav li.nav-red {
-    border-bottom-color: #c3404c;
+    border-bottom-color: $text-red;
 }
 
 /* LIST STYLING */
@@ -113,92 +114,94 @@ span.number, br {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-#nav li {
-    display: inline-block;
-    padding: 2% 1%;
-}
-
-#nav .number {
-    font-size: 2em;
+    
+    li {
+        display: inline-block;
+        padding: 2% 1%;
+    }
+    
+    .number {
+        font-size: 2em;
+    }
 }
 
 /************************************
 *********** FOOTER BUTTONS **********
 *************************************/
+/* BUTTON CONTAINER */
 footer {
     width: 88%;
     margin: 0 6%;
     height: 96px;
     padding: auto 10px;
-}
+    
+    /* BUTTON DIVS */
+    div {
+        width: 45%;
+        height: 96px;
+        padding: 0;
+        margin: 0;
+        float: left;
+    }
+    
+    /* RIGHT AND LEFT SPECIFIC */
+    div#right-button {
+        text-align: right;
+        padding-right: 5%;
 
-footer div {
-    width: 45%;
-    height: 96px;
-    padding: 0;
-    margin: 0;
-    float: left;
+        img.footer-arrow {
+            float: right;
+        }
+    }
+
+    div#left-button {
+        text-align: left;
+        padding-left: 5%;
+
+        img.footer-arrow {
+            float: left;
+        }
+    }
+    
+    /* LINK CONTENT/TEXT */
+    a {
+        display: inline-block;
+        width: 100%;
+        padding-top: 37px;
+
+        text-decoration: none;
+        color: white;
+        font-size: 1.3em;
+        font-weight: 200;
+    }
+    
+    /* ARROW */
+    img.footer-arrow {
+        width: 21px;
+        margin: auto 10px;
+        padding-top: 3px;
+    }
 }
 
 /* BUTTON BACKGROUND COLORS */
 footer div.blue-button {
-    background-color: #46a4c0;
+    background-color: $text-blue;
 }
 
 footer div.green-button {
-    background-color: #9fbe40;
+    background-color: $text-green;
 }
 
 footer div.yellow-button {
-    background-color: #ffc500;
+    background-color: $text-yellow;
 }
 
 footer div.red-button {
-    background-color: #c3404c;
+    background-color: $text-red;
 }
 
 footer div.blank-button {
-    background-color: #f1eeee;
-}
-
-/* lINK CONTENT STYLING */
-footer a {
-    display: inline-block;
-    width: 100%;
-    padding-top: 37px;
-    
-    text-decoration: none;
-    color: white;
-    font-size: 1.3em;
-    font-weight: 200;
-}
-
-/* RIGHT AND LEFT SPECIFIC */
-div#right-button {
-    text-align: right;
-    padding-right: 5%;
-}
-
-div#left-button {
-    text-align: left;
-    padding-left: 5%;
-}
-
-/* ARROW */
-img.footer-arrow {
-    width: 21px;
-    margin: auto 10px;
-    padding-top: 3px;
-}
-
-div#right-button img.footer-arrow {
-    float: right;
-}
-
-div#left-button img.footer-arrow {
-    float: left;
+    background-color: $background-gray;
 }
 
 /************************************

@@ -1,0 +1,199 @@
+/************************************
+************** GENERAL **************
+*************************************/
+html, body {
+  margin: 0;
+  height: 100%; }
+
+body {
+  background-color: #f1eeee;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: #262626; }
+
+div {
+  background-color: white;
+  text-align: center;
+  padding: 60px 8.5%;
+  margin: 15px 6%; }
+
+/************************************
+************** HEADER ***************
+*************************************/
+header {
+  height: 72px;
+  padding: 0;
+  text-align: left;
+  margin: 15px 6%;
+  background: white url("../img/color-header.png") no-repeat;
+  background-size: 100% 10px; }
+  header img#logo {
+    margin-top: 18px;
+    margin-left: 1.5%;
+    height: 46px;
+    width: 190px; }
+
+/************************************
+************** NAV BAR **************
+*************************************/
+div#nav-wrap {
+  padding: 0;
+  height: 114px;
+  display: hidden;
+  background-color: #f1eeee;
+  transition: all 300ms; }
+
+/* NORMAL SIZE NAV */
+div#nav {
+  margin: 0;
+  margin-right: 0;
+  padding: 0;
+  transition: all 200ms; }
+
+span.number, br {
+  transition: all 200ms; }
+
+/* REDUCED SIZE NAV */
+.nav-smaller span.number, .nav-smaller br {
+  display: none;
+  /*
+    opacity: 0;
+    transform: scale(1, 0);
+    height: 0;
+*/ }
+
+/* COLORING AND BORDER W/ OR W/O HIGHLIGHT */
+#nav a {
+  text-decoration: none;
+  color: #a5a5a5; }
+
+#nav a.nav-selected, #nav a:hover {
+  color: #262626; }
+  #nav a.nav-selected li, #nav a:hover li {
+    border-bottom-width: 5px;
+    border-bottom-style: solid; }
+
+/* BORDER COLORS */
+#nav li.nav-blue {
+  border-bottom-color: #46a4c0; }
+
+#nav li.nav-green {
+  border-bottom-color: #9fbe40; }
+
+#nav li.nav-yellow {
+  border-bottom-color: #ffc500; }
+
+#nav li.nav-red {
+  border-bottom-color: #c3404c; }
+
+/* LIST STYLING */
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  #nav ul li {
+    display: inline-block;
+    padding: 2% 1%; }
+  #nav ul .number {
+    font-size: 2em; }
+
+/************************************
+*********** FOOTER BUTTONS **********
+*************************************/
+/* BUTTON CONTAINER */
+footer {
+  width: 88%;
+  margin: 0 6%;
+  height: 96px;
+  padding: auto 10px;
+  /* BUTTON DIVS */
+  /* RIGHT AND LEFT SPECIFIC */
+  /* LINK CONTENT/TEXT */
+  /* ARROW */ }
+  footer div {
+    width: 45%;
+    height: 96px;
+    padding: 0;
+    margin: 0;
+    float: left; }
+  footer div#right-button {
+    text-align: right;
+    padding-right: 5%; }
+    footer div#right-button img.footer-arrow {
+      float: right; }
+  footer div#left-button {
+    text-align: left;
+    padding-left: 5%; }
+    footer div#left-button img.footer-arrow {
+      float: left; }
+  footer a {
+    display: inline-block;
+    width: 100%;
+    padding-top: 37px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 200; }
+  footer img.footer-arrow {
+    width: 21px;
+    margin: auto 10px;
+    padding-top: 3px; }
+
+/* BUTTON BACKGROUND COLORS */
+footer div.blue-button {
+  background-color: #46a4c0; }
+
+footer div.green-button {
+  background-color: #9fbe40; }
+
+footer div.yellow-button {
+  background-color: #ffc500; }
+
+footer div.red-button {
+  background-color: #c3404c; }
+
+footer div.blank-button {
+  background-color: #f1eeee; }
+
+/************************************
+*************** TEXT ****************
+*************************************/
+/* PAGE HEADER/TITLE -- bold, big */
+h1 {
+  font-weight: 600;
+  font-size: 3.2em;
+  padding: 0; }
+
+/* PAGE SUBTITLE -- thin, big */
+h2 {
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 150%; }
+
+/* DIV CONTEXT TITLES -- thin, small, caps, underlined */
+h3 {
+  font-weight: 300;
+  font-size: 0.9em;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: -4.5%; }
+
+/* DIV HEADER -- normal, big */
+h4 {
+  font-weight: 400;
+  font-size: 1.8em;
+  margin-bottom: -6px; }
+
+p.p-small {
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 150%; }
+
+p.p-large {
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 150%; }
+
+/*# sourceMappingURL=application.css.map */
