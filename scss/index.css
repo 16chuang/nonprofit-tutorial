@@ -49,5 +49,7 @@ div#intro-video-container {
 div#tutorial-structure img {
   width: 100%;
   margin: 10px 0; }
+div#tutorial-structure table {
+  margin-top: -2%; }
 
 /*# sourceMappingURL=index.css.map */

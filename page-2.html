@@ -1,3 +1,159 @@
+<!DOCTYPE html>
 <html>
-
+    <head>
+        <link rel="stylesheet" href="scss/application.css">
+        <link rel="stylesheet" href="scss/page-2.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <!-- STICKY, SHRINKING NAV BAR -->
+        <script type='text/javascript'>
+        //<![CDATA[
+            $(function() {
+                // Stick the #nav to the top of the window
+                var nav = $('#nav');
+                var navWrap = $('#nav-wrap');
+                var navHomeY = nav.offset().top;
+                var isFixed = false;
+                var $w = $(window);
+                var navNumber = $('.number');
+                $w.scroll(function() {
+                    var scrollTop = $w.scrollTop();
+                    var shouldBeFixed = scrollTop > navHomeY;
+                    if (shouldBeFixed && !isFixed) {
+                        nav.css({
+                            position: 'fixed',
+                            top: 0,
+                            left: nav.offset().left,
+                            width: nav.width(),
+                            height: '71px',
+                            boxShadow: '0px 2px 10px #E0E0E0'
+                        });
+                        isFixed = true;
+                        nav.addClass('nav-smaller');
+                        
+                        navWrap.css({ height: '71px' });
+                        navWrap.addClass('nav-smaller');
+                    }
+                    else if (!shouldBeFixed && isFixed)
+                    {
+                        nav.css({
+                            position: 'static',
+                            boxShadow: 'none',
+                            height: '114px'
+                        });
+                        isFixed = false;
+                        nav.removeClass('nav-smaller');
+                        navWrap.removeClass('nav-smaller');
+                        navWrap.css({ height: '114px' });
+                    }
+                });
+            });
+        //]]> 
+        </script>
+    </head>
+    
+    <body>
+        <!-- HEADER -->
+        <header>
+            <a href="http://govoluntr.com">
+                <img id="logo" src="img/govo-logo.png" alt="GoVoluntr logo">
+            </a>
+        </header>
+        
+        <!-- TITLE -->
+        <div id="title">
+            <h1>Navigate Your Account</h1>
+        </div>
+        
+        <!-- NAVIGATION BAR -->
+        <div id="nav-wrap">
+            <div id="nav">
+                <ul>
+                    <a href="index.html">
+                        <li class="nav-blue">
+                            <span class="number">1</span> <br>
+                            <span>Getting Started</span>                            
+                        </li>
+                    </a>
+                    <a href="page-2.html"  class="nav-selected">
+                        <li class="nav-green">
+                            <span class="number">2</span> <br>
+                            <span>Navigate Your Account</span>                            
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-yellow">
+                            <span class="number">3</span> <br>
+                            <span>Create an Opportunity</span>                            
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-yellow">
+                            <span class="number">4</span> <br>
+                            <span>Prepare for Opportunity</span>                            
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-yellow">
+                            <span class="number">5</span> <br>
+                            <span>After the Opportunity</span>                            
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-red">
+                            <span class="number">6</span> <br>
+                            <span>Other Features</span>                            
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- CREATE AN ACCOUNT -->
+        <div id="create-account">
+            <h3>Create an Account</h3>
+            <p class="p-large">(If you’ve already created an account, feel free to skip to the next section.)</p>
+            <p class="p-large">1. Go to govoluntr.com and click on Register.</p>
+            <img src="img/page-2/signup-1.png" alt="step 1" style="width: 100%">
+            <p class="p-large">2. Select non-profit.</p>
+            <img src="img/page-2/signup-2.png" alt="step 2" style="width: 100%">
+            <p class="p-large">3. Fill out the form, making sure to complete all of the required fields.</p>
+            <img src="img/page-2/signup-3.png" alt="step 3" style="width: 100%">
+        </div>
+        
+        <!-- YOUR DASHBOARD -->
+        <div id="dashboard">
+            <h3>Your Dasbhoard</h3>
+            <h4 style="font-size: 1.78em;">There are 3 distinct columns on your GoVo home page, or dashboard.</h4>
+            <img src="img/page-2/dashboard.png" alt="dashboard" style="width: 100%; margin-top: 3%;">
+            <table>
+                <td><p class="p-small">On the far left column, you can view your ongoing and past volunteer opportunities.</p></td>
+                <td><p class="p-small">In the middle is your RAK (recent acts of kindness), an activity feed of your GoVo volunteers and non-profit friends.</p></td>
+                <td><p class="p-small">On the far right is the menu bar, used for navigating around the rest of the site.</p></td>
+            </table>
+        </div>
+        
+        <div id="transition">
+            <h2>We’ll go over many of the menu bar items soon. <br> For now, let’s post our first volunteer opportunity.</h2>
+        </div>
+        
+        <!-- FOOTER BUTTONS -->
+        <footer>
+            <div id="left-button" class="blue-button">
+                <a href="index.html">
+                    <img src="img/left-footer-arrow.png" class="footer-arrow">
+                    <span>Getting Started</span>
+                </a>
+            </div>
+            <div id="right-button" class="yellow-button">
+                <a href="page-3.html">
+                    <img src="img/right-footer-arrow.png" class="footer-arrow">
+                    <span>Create an Opportunity</span>
+                </a>
+            </div>
+        </footer>
+        
+    </body>
+    
 </html>
