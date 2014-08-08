@@ -1,4 +1,39 @@
 /* TITLE */
+/* CREATE AN ACCOUNT */
+div#create-account section {
+  margin: 1% 5% 4% 5%;
+  position: relative; }
+  div#create-account section div.number {
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #9fbe40;
+    line-height: 45px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: -2.5%; }
+  div#create-account section div.wrapper {
+    background-color: white;
+    border: 2px solid #f1eeee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+    div#create-account section div.wrapper table {
+      margin: -5px -1% -10px -1%; }
+      div#create-account section div.wrapper table td {
+        width: 50%; }
+      div#create-account section div.wrapper table img {
+        width: 100%; }
+      div#create-account section div.wrapper table a {
+        text-decoration: none;
+        color: #9fbe40; }
+      div#create-account section div.wrapper table a:hover {
+        color: #95aa4a; }
+
 /* TRANSITION */
 div#transition {
   padding: 30px inherit; }

@@ -23,6 +23,7 @@
                     if (shouldBeFixed && !isFixed) {
                         nav.css({
                             position: 'fixed',
+                            'z-index': 10,
                             top: 0,
                             left: nav.offset().left,
                             width: nav.width(),
@@ -114,19 +115,43 @@
         <div id="create-account">
             <h3>Create an Account</h3>
             <p class="p-large">(If you’ve already created an account, feel free to skip to the next section.)</p>
-            <p class="p-large">1. Go to govoluntr.com and click on Register.</p>
-            <img src="img/page-2/signup-1.png" alt="step 1" style="width: 100%">
-            <p class="p-large">2. Select non-profit.</p>
-            <img src="img/page-2/signup-2.png" alt="step 2" style="width: 100%">
-            <p class="p-large">3. Fill out the form, making sure to complete all of the required fields.</p>
-            <img src="img/page-2/signup-3.png" alt="step 3" style="width: 100%">
+            
+            <section id="register">
+                <div class="number">1</div>
+                <div class="wrapper">
+                    <table>
+                        <td><p class="p-large">Go to <a href="http://govoluntr.com/">govoluntr.com</a> <br> and click on Register.</p></td>
+                        <td><img src="img/page-2/signup-1.png" alt="step 1"></td>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="select-nonprofit">
+                <div class="number">2</div>
+                <div class="wrapper">
+                    <table>
+                        <td><p class="p-large">Select non-profit.</p></td>
+                        <td><img src="img/page-2/signup-2.png" alt="step 2"></td>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="fill-form">
+                <div class="number">3</div>
+                <div class="wrapper">
+                    <table>
+                        <td><p class="p-large">Fill out the form, making sure to complete all of the required fields.</p></td>
+                        <td><img src="img/page-2/signup-3.png" alt="step 3"></td>
+                    </table>
+                </div>
+            </section>
         </div>
         
         <!-- YOUR DASHBOARD -->
         <div id="dashboard">
             <h3>Your Dasbhoard</h3>
             <h4 style="font-size: 1.78em;">There are 3 distinct columns on your GoVo home page, or dashboard.</h4>
-            <img src="img/page-2/dashboard.png" alt="dashboard" style="width: 100%; margin-top: 3%;">
+            <img src="img/page-2/dashboard-2.png" alt="dashboard" style="width: 100%; margin-top: 3%; margin-bottom: -7px;">
             <table>
                 <td><p class="p-small">On the far left column, you can view your ongoing and past volunteer opportunities.</p></td>
                 <td><p class="p-small">In the middle is your RAK (recent acts of kindness), an activity feed of your GoVo volunteers and non-profit friends.</p></td>

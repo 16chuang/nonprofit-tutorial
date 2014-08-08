@@ -5,6 +5,60 @@ div#title {
 
 }
 
+/* CREATE AN ACCOUNT */
+div#create-account section {
+    margin: 1% 5% 4% 5%;
+    position: relative;
+
+    div.number {
+        margin: 0;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+
+        background-color: $text-green;
+
+        line-height: 45px;
+        color: white;
+
+        border-radius: 50%;
+
+        position: absolute;
+        top: -5%;
+        left: -2.5%;
+    }
+
+    div.wrapper {
+        background-color: white;
+        border: 2px solid $background-gray;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+        table {
+            margin: -5px -1% -10px -1%;
+            
+            td {
+                width: 50%;
+            }
+            
+            img {
+                width: 100%;
+            }
+            
+            a {
+                text-decoration: none;
+                color: $text-green;
+            }
+            
+            a:hover {
+                color: $govo-green;
+            }
+        }
+    }
+}
+
 /* TRANSITION */
 div#transition {
     padding: 30px inherit;

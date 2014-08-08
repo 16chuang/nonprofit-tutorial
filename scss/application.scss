@@ -137,7 +137,7 @@ footer {
     
     /* BUTTON DIVS */
     div {
-        width: 45%;
+        width: 44.5%;
         height: 96px;
         padding: 0;
         margin: 0;
@@ -148,6 +148,7 @@ footer {
     div#right-button {
         text-align: right;
         padding-right: 5%;
+        margin-left: .5%;
 
         img.footer-arrow {
             float: right;
@@ -157,6 +158,7 @@ footer {
     div#left-button {
         text-align: left;
         padding-left: 5%;
+        margin-right: .5%;
 
         img.footer-arrow {
             float: left;
@@ -185,7 +187,7 @@ footer {
 
 /* BUTTON BACKGROUND COLORS */
 footer div.blue-button {
-    background-color: $text-blue;
+    background-color: $govo-blue;
 }
 
 footer div.green-button {
@@ -193,7 +195,7 @@ footer div.green-button {
 }
 
 footer div.yellow-button {
-    background-color: $text-yellow;
+    background-color: $govo-yellow;
 }
 
 footer div.red-button {
