@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "file": "",
+  "sources": ["page-3.scss","_colors.scss"],
+  "names": [],
+  "mappings": "AAEA;EACI,OAAO;;;AAKX,GAAG,UAAU,MAAM;EAEP,OAAO;EACP,YAAY;;;AAMxB,GAAG;EACC,SAAS"
+}

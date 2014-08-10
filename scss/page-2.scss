@@ -10,6 +10,7 @@ div#create-account section {
     margin: 1% 5% 4% 5%;
     position: relative;
 
+    /* STYLE AND POSITION CIRCLE NUMBER */
     div.number {
         margin: 0;
         padding: 0;
@@ -27,7 +28,8 @@ div#create-account section {
         top: -5%;
         left: -2.5%;
     }
-
+    
+    /* BORDERED WRAPPER */
     div.wrapper {
         background-color: white;
         border: 2px solid $background-gray;
@@ -37,7 +39,7 @@ div#create-account section {
         padding: 0;
 
         table {
-            margin: -5px -1% -10px -1%;
+            margin: -5px -1% -10px -1%; /* shrink table to fit picture neatly */
             
             td {
                 width: 50%;
@@ -47,11 +49,11 @@ div#create-account section {
                 width: 100%;
             }
             
+            /* GOVO HOMEPAGE LINK */
             a {
                 text-decoration: none;
                 color: $text-green;
             }
-            
             a:hover {
                 color: $govo-green;
             }

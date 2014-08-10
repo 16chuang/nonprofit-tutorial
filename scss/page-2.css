@@ -2,7 +2,9 @@
 /* CREATE AN ACCOUNT */
 div#create-account section {
   margin: 1% 5% 4% 5%;
-  position: relative; }
+  position: relative;
+  /* STYLE AND POSITION CIRCLE NUMBER */
+  /* BORDERED WRAPPER */ }
   div#create-account section div.number {
     margin: 0;
     padding: 0;
@@ -23,7 +25,9 @@ div#create-account section {
     margin: 0;
     padding: 0; }
     div#create-account section div.wrapper table {
-      margin: -5px -1% -10px -1%; }
+      margin: -5px -1% -10px -1%;
+      /* shrink table to fit picture neatly */
+      /* GOVO HOMEPAGE LINK */ }
       div#create-account section div.wrapper table td {
         width: 50%; }
       div#create-account section div.wrapper table img {
