@@ -19,32 +19,48 @@ div#image {
   div#image a {
     display: block;
     position: absolute; }
-  div#image a#private {
-    border: solid purple 1px;
+  div#image a#kid-friendly {
     width: 350px;
     height: 30px;
-    left: 50%;
-    top: 18%; }
-    div#image a#private:hover {
-      background-color: purple; }
-  div#image .tooltip:hover:after {
-    background: #333;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    color: #fff;
-    content: attr(title);
-    padding: 5px 15px;
+    border-style: solid;
+    border-color: #ffc500;
+    border-width: 0px;
+    top: 22.7%;
+    left: 50%; }
+    div#image a#kid-friendly:hover {
+      border-width: 3px; }
+  div#image a.tooltip2 span {
     position: absolute;
-    z-index: 8;
-    width: 220px; }
-  div#image .tooltip:hover:before {
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 0px 6px 6px;
-    bottom: 20px;
-    content: "";
-    position: absolute;
-    z-index: 9; }
+    top: -90%;
+    left: -90%;
+    max-width: 300px;
+    padding: 3% 3%;
+    background-color: white;
+    border: solid gray 1px;
+    border-radius: 3px;
+    box-shadow: 0px 3px 7px #a5a5a5;
+    visibility: hidden; }
+    div#image a.tooltip2 span b {
+      display: block;
+      height: 15px;
+      width: 15px;
+      border-right: solid gray 1px;
+      border-bottom: solid gray 1px;
+      transform: rotate(-45deg);
+      background-color: white;
+      position: absolute;
+      left: 97.8%;
+      top: 40%; }
+    div#image a.tooltip2 span p {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.4em;
+      color: #262626; }
+    div#image a.tooltip2 span strong {
+      font-weight: 600;
+      color: #c3404c; }
+  div#image a.tooltip2:hover span {
+    visibility: visible; }
 
 /* TRANSITION */
 div#transition {
