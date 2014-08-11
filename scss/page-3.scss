@@ -14,6 +14,57 @@ div#navigate {
     }
 }
 
+/* FILL OUT THE FORM */
+div#image {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: white url("../img/page-3/form.png") no-repeat;
+    background-size: 90%;
+    background-position: center;
+    height: 634px; /* 709 * 0.9 */
+    
+    a {
+        display: block;
+        position: absolute;
+    }
+    
+    a#private {
+        border: solid purple 1px;
+        width: 350px;
+        height: 30px;
+        
+        left: 50%;
+        top: 18%;
+        
+        &:hover {
+            background-color: purple;
+        }
+    }
+    
+    .tooltip:hover:after {
+        background: #333;
+        background: rgba(0,0,0,.8);
+        border-radius: 5px;
+        color: #fff;
+        content: attr(title);
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 8;
+        width: 220px;
+    }
+    
+    .tooltip:hover:before{
+        border: solid;
+        border-color: #333 transparent;
+        border-width: 6px 0px 6px 6px;
+        bottom: 20px;
+        content: "";
+        position: absolute;
+        z-index: 9;
+    }
+}
+
 /* TRANSITION */
 div#transition {
     padding: 30px 15%;
