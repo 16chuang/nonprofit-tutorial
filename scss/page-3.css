@@ -35,8 +35,8 @@ div#image {
     left: -90%;
     max-width: 300px;
     padding: 3% 3%;
-    background-color: white;
-    border: solid gray 1px;
+    background-color: #f4f4f4;
+    border: solid #a5a5a5 1px;
     border-radius: 3px;
     box-shadow: 0px 3px 7px #a5a5a5;
     visibility: hidden; }
@@ -44,10 +44,10 @@ div#image {
       display: block;
       height: 15px;
       width: 15px;
-      border-right: solid gray 1px;
-      border-bottom: solid gray 1px;
+      border-right: solid #a5a5a5 1px;
+      border-bottom: solid #a5a5a5 1px;
       transform: rotate(-45deg);
-      background-color: white;
+      background-color: #f4f4f4;
       position: absolute;
       left: 97.8%;
       top: 40%; }
@@ -58,7 +58,7 @@ div#image {
       color: #262626; }
     div#image a.tooltip2 span strong {
       font-weight: 600;
-      color: #c3404c; }
+      color: #f6b54e; }
   div#image a.tooltip2:hover span {
     visibility: visible; }
 
