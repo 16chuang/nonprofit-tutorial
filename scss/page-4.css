@@ -1,0 +1,30 @@
+div#button-overview table {
+  margin: 0 auto;
+  border: none; }
+  div#button-overview table td {
+    width: 25%;
+    vertical-align: top; }
+    div#button-overview table td img {
+      width: 80%;
+      margin-bottom: -10%; }
+
+div#button-overview span.p-tiny {
+  font-size: 0.8em; }
+
+div#track table td {
+  width: 50%; }
+div#track table img {
+  width: 100%; }
+
+img.icon {
+  width: 7%;
+  margin-bottom: -2%; }
+
+a {
+  text-decoration: none; }
+
+strong {
+  font-weight: 500;
+  color: #f6b54e; }
+
+/*# sourceMappingURL=page-4.css.map */

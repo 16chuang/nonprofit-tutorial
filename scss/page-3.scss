@@ -33,30 +33,52 @@ div#image {
     background-size: contain;
     background-position: center;
     
+    div.hover-wrapper {
+        margin: 0;
+        padding: 0;
+        background-color: green;
+        width: 500px;
+    }
+    
     a {
         display: block;
         position: absolute;
         border-style: solid;
         border-color: $text-yellow; 
-        border-width: 0px;
+        border-width: 3px;
         
         &:hover {
             border-width: 3px;
         }
     }
     
-    a#kid-friendly {
+    a#private {
         width: 40%;
         height: 4.5%;
         
-        top: 22.7%;
+        top: 17.5%;
+        left: 50%;
+    }
+    
+    a#kid-friendly {
+        width: 40%;
+        height: 4.5%;
+        float: right;
+    }
+    
+    a#groups {
+        width: 40%;
+        height: 8.5%;
+        
+        top: 27%;
         left: 50%;
     }
     
     a.tooltip2 span {
-        position: absolute;
-        top: -90%;
-        left: -90%;
+//        position: absolute;
+//        top: -90%;
+//        left: -95%;
+        float: left;
         
         max-width: 300px;
         
@@ -68,7 +90,7 @@ div#image {
         
         box-shadow: 0px 3px 7px $text-light-gray;
         
-        visibility: hidden;
+//        visibility: hidden;
         
         b {
             display: block;

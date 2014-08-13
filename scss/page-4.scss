@@ -1,0 +1,44 @@
+@import 'colors';
+
+div#button-overview table {
+    margin: 0 auto;
+    border: none;
+    
+    td {
+        width: 25%;
+        vertical-align: top;
+        
+        img {
+            width: 80%;
+            margin-bottom: -10%;
+        }
+    }
+}
+
+div#button-overview span.p-tiny {
+    font-size: 0.8em;
+}
+
+div#track table {
+    td {
+        width: 50%;
+    }
+    
+    img {
+        width: 100%;
+    }
+}
+
+img.icon {
+    width: 7%; 
+    margin-bottom:-2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
+    color: $govo-yellow;
+}

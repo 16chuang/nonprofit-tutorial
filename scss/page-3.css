@@ -25,30 +25,41 @@ div#image {
   background: white url("../img/page-3/form.png") no-repeat;
   background-size: contain;
   background-position: center; }
+  div#image div.hover-wrapper {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    width: 500px; }
   div#image a {
     display: block;
     position: absolute;
     border-style: solid;
     border-color: #ffc500;
-    border-width: 0px; }
+    border-width: 3px; }
     div#image a:hover {
       border-width: 3px; }
+  div#image a#private {
+    width: 40%;
+    height: 4.5%;
+    top: 17.5%;
+    left: 50%; }
   div#image a#kid-friendly {
     width: 40%;
     height: 4.5%;
-    top: 22.7%;
+    float: right; }
+  div#image a#groups {
+    width: 40%;
+    height: 8.5%;
+    top: 27%;
     left: 50%; }
   div#image a.tooltip2 span {
-    position: absolute;
-    top: -90%;
-    left: -90%;
+    float: left;
     max-width: 300px;
     padding: 3% 3%;
     background-color: #f4f4f4;
     border: solid #a5a5a5 1px;
     border-radius: 3px;
-    box-shadow: 0px 3px 7px #a5a5a5;
-    visibility: hidden; }
+    box-shadow: 0px 3px 7px #a5a5a5; }
     div#image a.tooltip2 span b {
       display: block;
       height: 15px;
