@@ -105,6 +105,7 @@ span.number, br {
 footer {
   width: 88%;
   margin: 0 6%;
+  margin-bottom: 1%;
   height: 96px;
   padding: auto 10px;
   /* BUTTON DIVS */

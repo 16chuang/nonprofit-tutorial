@@ -7,28 +7,37 @@ div#navigate table td {
   text-align: left; }
 
 /* FILL OUT THE FORM */
-div#image {
+div#image-wrapper {
+  margin: 0;
+  padding: 0;
   position: relative;
+  width: 100%;
+  padding-bottom: 77.5%; }
+
+div#image {
+  position: absolute;
   padding: 0;
   margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: white url("../img/page-3/form.png") no-repeat;
-  background-size: 90%;
-  background-position: center;
-  height: 634px;
-  /* 709 * 0.9 */ }
+  background-size: contain;
+  background-position: center; }
   div#image a {
     display: block;
-    position: absolute; }
-  div#image a#kid-friendly {
-    width: 350px;
-    height: 30px;
+    position: absolute;
     border-style: solid;
     border-color: #ffc500;
-    border-width: 0px;
+    border-width: 0px; }
+    div#image a:hover {
+      border-width: 3px; }
+  div#image a#kid-friendly {
+    width: 40%;
+    height: 4.5%;
     top: 22.7%;
     left: 50%; }
-    div#image a#kid-friendly:hover {
-      border-width: 3px; }
   div#image a.tooltip2 span {
     position: absolute;
     top: -90%;
