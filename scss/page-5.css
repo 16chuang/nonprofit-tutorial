@@ -1,0 +1,58 @@
+img {
+  width: 100%; }
+
+div#approve-hours table#options {
+  margin-top: 3%; }
+  div#approve-hours table#options p.p-large {
+    margin-bottom: -1%;
+    font-size: 1.6em; }
+  div#approve-hours table#options td {
+    width: 40%;
+    padding: 0 2.5%;
+    vertical-align: top; }
+
+div#approve-hours table#steps td {
+  width: 45%;
+  padding: 0 1.25%; }
+  div#approve-hours table#steps td img, div#approve-hours table#steps td p {
+    margin-top: 6%;
+    margin-bottom: 6%; }
+
+img.icon {
+  width: 7%;
+  margin-bottom: -2.5%; }
+
+/* TIME ENTRY */
+div#time-entry section {
+  margin: 5% 5% 0% 5%;
+  position: relative;
+  /* STYLE AND POSITION CIRCLE NUMBER */
+  /* BORDERED WRAPPER */ }
+  div#time-entry section div.number {
+    margin: 0;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #f6b54e;
+    line-height: 45px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: -2.5%; }
+  div#time-entry section div.wrapper {
+    background-color: white;
+    border: 2px solid #f1eeee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0; }
+    div#time-entry section div.wrapper table {
+      margin: -5px -1% -10px -1%;
+      /* shrink table to fit picture neatly */ }
+      div#time-entry section div.wrapper table td {
+        width: 50%; }
+        div#time-entry section div.wrapper table td p {
+          padding: 1% 10%; }
+
+/*# sourceMappingURL=page-5.css.map */

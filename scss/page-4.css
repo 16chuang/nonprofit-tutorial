@@ -23,6 +23,9 @@ img.icon {
 a {
   text-decoration: none; }
 
+a:hover strong {
+  color: #ffc500; }
+
 strong {
   font-weight: 500;
   color: #f6b54e; }
