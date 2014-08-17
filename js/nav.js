@@ -22,7 +22,7 @@ $(function() {
             isFixed = true;
             nav.addClass('nav-smaller');
 
-            navWrap.css({ height: '71px' });
+            navWrap.css({ height: '71px'});
             navWrap.addClass('nav-smaller');
         }
         else if (!shouldBeFixed && isFixed)
