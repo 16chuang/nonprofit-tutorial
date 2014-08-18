@@ -8,9 +8,34 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/nav.js"></script>
+        <script src="js/side-nav.js"></script>
     </head>
     
     <body>
+        <!-- SIDE DOT NAV -->
+        <div id="side-nav-container">
+            <div id="side-nav">
+                <ul>
+                    <li>
+                        <a href="#welcome"></a>
+                        <p>Welcome</p>
+                    </li>
+                    <li>
+                        <a href="#tutorial-structure"></a>
+                        <p>Structure</p>
+                    </li>
+                    <li>
+                        <a href="#pages"></a>
+                        <p>Pages</p>
+                    </li>
+                    <li>
+                        <a href="#sections"></a>
+                        <p>Sections</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
         <!-- HEADER -->
         <header>
             <a href="http://govoluntr.com">
@@ -21,10 +46,10 @@
         <!-- WELCOME TO GOVOLUNTR. -->
         <div id="welcome">
             <h1>Welcome to GoVoluntr.</h1>
-            <h2>We're excited to have you on board! This tutorial series will teach you how to navigate your new non-profit account and how to post opportunities on GoVo. Once you finish, you'll be well on your way to do-goodr stardom!</h2>
+            <h2>We're excited to have you on board! This tutorial series will show you how to navigate your new non-profit account and how to post opportunities on GoVo. Once you finish, you'll be well on your way to do-goodr stardom!</h2>
             <div id="intro-video-background">
                 <div id="intro-video-container">
-                    <iframe src="//player.vimeo.com/video/68194171?title=0&amp;byline=0&amp;portrait=0&amp;color=9fbe40"  width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!--                    <iframe src="//player.vimeo.com/video/68194171?title=0&amp;byline=0&amp;portrait=0&amp;color=9fbe40"  width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
                 </div>
             </div>
         </div>
@@ -110,6 +135,48 @@
                 </a>
             </div>
         </footer>
+        
+        <script>            
+            $(document).ready(function () {
+                $(document).on("scroll", onScroll);
+                
+                //smoothscroll
+                $('a[href^="#"]').on('click', function (e) { // all links whose href that start with #
+                    e.preventDefault();
+                    $(document).off("scroll");
+
+                    $('a').each(function () { // unhighlight all other links
+                        $(this).removeClass('selected');
+                    })
+                    $(this).addClass('selected'); // highlight clicked on link
+                    
+                    var target = this.hash,
+                        menu = target;
+                    $target = $(target);
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top-50
+                    }, 500, 'swing', function () {
+                        window.location.hash = target;
+                        $(document).on("scroll", onScroll);
+                    });
+                });
+            });
+            
+            function onScroll(event){
+                var scrollPos = $(document).scrollTop();
+                $('#side-nav a').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.position().top-50 <= scrollPos && refElement.position().top + refElement.height() + 50 >= scrollPos) {
+                        $('#side-nav ul li a').removeClass("selected");
+                        currLink.addClass("selected");
+                    }
+                    else{
+                        currLink.removeClass("selected");
+                    }
+                });
+            }
+        </script>
         
     </body>
 </html>

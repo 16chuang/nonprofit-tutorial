@@ -2,13 +2,31 @@
 <html>
     <head>
         <link rel="stylesheet" href="scss/application.css">
-        <link rel="stylesheet" href="scss/page-5.css">
+        <link rel="stylesheet" href="scss/page-6.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/nav.js"></script>
     </head>
 
+    <script type="text/javascript">
+        $("p").on("mouseover", function() {
+           $(this).css( "background-color", "blue"); 
+        });
+    </script>
+    
     <body>
+        <!-- SIDE DOT NAV -->
+        <div id="side-nav-container">
+            <div id="side-nav">
+                <ul>
+                    <li>
+                        <a href="#other-features"></a>
+                        <p>Other Features</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
         <!-- HEADER -->
         <header>
             <a href="http://govoluntr.com">
@@ -64,5 +82,98 @@
                 </ul>
             </div>
         </div>
+        
+        <div id="other-features">
+            <h3>Other Features</h3>
+            <table>
+                <td style="width: 29%; padding-left:10%; padding-right: 2.5%;"><img src="img/page-6/menu-cut.png" style="width: 100%;"></td>
+                <span id="reports"></span>
+                <span id="supporters"></span>
+                <span id="profile"></span>
+                <span id="settings"></span>
+                
+                <td id="description" style="vertical-align: top; width: 46%; padding-right: 10%; padding-left: 2.5%;">
+                    <span id="default-description">
+                        <h4>Hover over a menu element on the left to learn more about it.</h4>
+                    </span>
+                    
+                    <span id="reports-description">
+                        <p class="p-large">Generate custom, saveable reports on your non-profit’s volunteers and employees.</p>
+                        <p class="p-small">Apply many filters, including by hours volunteered, opportunities attended, and within certain date ranges. If you’d like more detailed or customizable reports, contact the GoVo team at <a class="email-link" href="mailto:nonprofit@govoluntr.com"><strong>nonprofit@govoluntr.com</strong></a>.</p>
+                    </span>
+                    
+                    <span id="supporters-description">
+                        <p class="p-large">View and invite new supporters via email.</p>
+                        <p class="p-small">Alert your supporters of your presence on GoVoluntr, and encourage them to create a free account and check it out!</p>
+                    </span>
+                    
+                    <span id="profile-description">
+                        <p class="p-large">View and edit your non-profit’s profile.</p>
+                        <p class="p-small">Edit your profile picture, basic information, mission statement, and more. View links to your employee's profiles and total number of hours volunteered.</p>
+                    </span>
+                    
+                    <span id="settings-description">
+                        <p class="p-large">Adjust your email preferences, edit your nonprofit’s employees and affiliates, and upload your 501(c) certificate so GoVo can verify your nonprofit’s status.</p>
+                    </span>
+                </td>
+            </table>
+        </div>
+        
+        <div id="transition">
+            <p class="p-large">That's it for GoVoluntr basics. Congrats on getting through the tutorial! We're excited to see what you can bring to your community. <br> <br> If you have any questions, comments, or concerns, email the GoVo team at <a class="email-link" href="mailto:nonprofit@govoluntr.com"><strong>nonprofit@govoluntr.com</strong></a>. Have fun, and as always, work hard, play harder, and GoVoluntr hardest!</p>
+        </div>
+        
+        <!-- FOOTER BUTTONS -->
+        <footer>
+            <div id="left-button" class="yellow-button">
+                <a href="page-5.html">
+                    <img src="img/left-footer-arrow.png" class="footer-arrow">
+                    <span>After the Opportunity</span>
+                </a>
+            </div>
+            <div id="right-button" class="blank-button"></div>
+        </footer>
+        
+        <script>            
+            $(document).ready(function () {
+                $(document).on("scroll", onScroll);
+                
+                //smoothscroll
+                $('a[href^="#"]').on('click', function (e) { // all links whose href that start with #
+                    e.preventDefault();
+                    $(document).off("scroll");
+
+                    $('a').each(function () { // unhighlight all other links
+                        $(this).removeClass('selected');
+                    })
+                    $(this).addClass('selected'); // highlight clicked on link
+                    
+                    var target = this.hash,
+                        menu = target;
+                    $target = $(target);
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top-50
+                    }, 500, 'swing', function () {
+                        window.location.hash = target;
+                        $(document).on("scroll", onScroll);
+                    });
+                });
+            });
+            
+            function onScroll(event){
+                var scrollPos = $(document).scrollTop();
+                $('#side-nav a').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.position().top-50 <= scrollPos && refElement.position().top + refElement.height() + 50 >= scrollPos) {
+                        $('#side-nav ul li a').removeClass("selected");
+                        currLink.addClass("selected");
+                    }
+                    else{
+                        currLink.removeClass("selected");
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

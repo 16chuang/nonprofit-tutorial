@@ -126,6 +126,75 @@ span.number, br {
 }
 
 /************************************
+************* SIDE NAV **************
+*************************************/
+div#side-nav-container {
+    // remove normal div styling
+    background-color: $background-gray;
+    margin: 0;
+    padding: 0;
+    
+    position: fixed;
+    width: 4%;
+    left: 96%;
+    margin: auto 0;
+    top: 0; bottom: 0;
+    
+    display: table;
+}
+
+div#side-nav {
+    background-color: $background-gray;
+    margin: 0;
+    padding: 0;
+    
+    display: table-cell;
+    vertical-align: middle;
+    
+    ul {
+        padding: 0;
+    }
+    
+    ul li {
+        list-style: none;
+        padding: 8% 0;
+        position: relative;
+        
+        a {
+            text-decoration: none;
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            background-color: darken(white, 20%);
+            
+            border-radius: 50%;
+            
+            &:hover, &.selected {
+                background-color: darken(white, 50%);
+            }
+            
+            &:hover ~ p {
+                display: inline-block;
+            }
+        }
+            
+        p {
+            display: none;
+            position: absolute;
+            top: -33%;
+            right: 80%;
+            text-align: center;
+            font-size: 0.77em;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: white;
+            background-color: gray;
+            padding: 5% 13%;;
+        }
+    }
+}
+
+/************************************
 *********** FOOTER BUTTONS **********
 *************************************/
 /* BUTTON CONTAINER */

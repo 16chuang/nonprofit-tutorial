@@ -1,0 +1,68 @@
+@import 'colors';
+
+div#other-features {
+    table {
+        margin: 0 0%;
+        position: relative;
+    }
+    
+    p {
+        text-align: left;
+    }
+    
+    h4 {
+        margin-top: 0;
+    }
+    
+    /* IMAGE HOVERABLES */
+    span {
+        display: inline-block;
+        width: 18.1%;
+        position: absolute;
+        left: 21.5%;
+        border: $text-red 2px solid;
+        z-index: 2;
+        
+        &#reports {
+            padding-bottom: 13.7%; // maintain aspect ratio
+        }
+        
+        &#supporters {
+            border-color: green;
+            padding-bottom: 6.7%;
+        }
+        
+        &#profile {
+            border-color: blue;
+            padding-bottom: 6.7%;
+        }
+        
+        &#settings {
+            
+        }
+    }
+    
+    td#description span {
+        position: static;
+        width: auto;
+        left: 0;
+        border: none;
+    }
+}
+
+div#transition {
+    padding: 40px 15%;
+}
+
+a.email-link {
+    text-decoration: none;
+    color: $text-red;
+
+    &:hover {
+        color: $govo-red;
+    }
+    
+    strong {
+        font-weight: 600;
+    }
+}
