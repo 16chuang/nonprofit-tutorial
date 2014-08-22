@@ -14,7 +14,7 @@ div#other-features {
     left: 21.5%;
     border-color: #c3404c;
     border-style: solid;
-    border-width: 5px;
+    border-width: 0px;
     z-index: 2; }
     div#other-features span.hoverables#reports {
       padding-bottom: 13.7%; }
