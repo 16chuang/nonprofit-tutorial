@@ -7,12 +7,6 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/nav.js"></script>
     </head>
-
-    <script type="text/javascript">
-        $("p").on("mouseover", function() {
-           $(this).css( "background-color", "blue"); 
-        });
-    </script>
     
     <body>
         <!-- SIDE DOT NAV -->
@@ -86,11 +80,11 @@
         <div id="other-features">
             <h3>Other Features</h3>
             <table>
-                <td style="width: 29%; padding-left:10%; padding-right: 2.5%;"><img src="img/page-6/menu-cut.png" style="width: 100%;"></td>
-                <span id="reports"></span>
-                <span id="supporters"></span>
-                <span id="profile"></span>
-                <span id="settings"></span>
+                <td id="hoverables" style="width: 29%; padding-left:10%; padding-right: 2.5%;"><img src="img/page-6/menu-cut.png" style="width: 100%;"></td>
+                <span id="reports" class="hoverables"></span>
+                <span id="supporters" class="hoverables"></span>
+                <span id="profile" class="hoverables"></span>
+                <span id="settings" class="hoverables"></span>
                 
                 <td id="description" style="vertical-align: top; width: 46%; padding-right: 10%; padding-left: 2.5%;">
                     <span id="default-description">
@@ -134,7 +128,8 @@
             <div id="right-button" class="blank-button"></div>
         </footer>
         
-        <script>            
+        <script>         
+            // ====================== SIDE DOT NAV CODE ======================
             $(document).ready(function () {
                 $(document).on("scroll", onScroll);
                 
@@ -174,6 +169,42 @@
                     }
                 });
             }
+            
+            // ====================== MENU HOVER CODE ======================
+            $("span#reports")
+                .mouseenter(function() {
+                    $(this).css( "border-width", "4px");
+                    $("td#description > span").css("display", "none");
+                    $("span#reports-description").css( "display", "block");
+                });
+            
+            $("span#supporters")
+                .mouseenter(function() {
+                    $(this).css( "border-width", "4px");
+                    $("td#description > span").css("display", "none");
+                    $("span#supporters-description").css( "display", "block");
+                });
+            
+            $("span#profile")
+                .mouseenter(function() {
+                    $(this).css( "border-width", "4px");
+                    $("td#description > span").css("display", "none");
+                    $("span#profile-description").css( "display", "block");
+                });
+            
+            $("span#settings")
+                .mouseenter(function() {
+                    $(this).css( "border-width", "4px");
+                    $("td#description > span").css("display", "none");
+                    $("span#settings-description").css( "display", "block");
+                });
+            
+            $("span.hoverables")
+                .mouseleave(function() {
+                    $(this).css( "border-width", "0px"); 
+                    $("td#description > span").css("display", "none");
+                    $("span#default-description").css("display", "block");
+                })
         </script>
     </body>
 </html>

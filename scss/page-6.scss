@@ -15,12 +15,14 @@ div#other-features {
     }
     
     /* IMAGE HOVERABLES */
-    span {
+    span.hoverables {
         display: inline-block;
         width: 18.1%;
         position: absolute;
         left: 21.5%;
-        border: $text-red 2px solid;
+        border-color: $text-red;
+        border-style: solid;
+        border-width: 5px;
         z-index: 2;
         
         &#reports {
@@ -28,25 +30,31 @@ div#other-features {
         }
         
         &#supporters {
-            border-color: green;
             padding-bottom: 6.7%;
+            top: 106.9%;
         }
         
         &#profile {
-            border-color: blue;
             padding-bottom: 6.7%;
+            top: 120%;
         }
         
         &#settings {
-            
+            padding-bottom: 17%;
+            top: 132.9%;
         }
     }
     
     td#description span {
+        display: none;
         position: static;
         width: auto;
         left: 0;
         border: none;
+        
+        &#default-description {
+            display: inline-block;
+        }
     }
 }
 
