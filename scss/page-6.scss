@@ -3,7 +3,6 @@
 div#other-features {
     table {
         margin: 0 0%;
-        position: relative;
     }
     
     p {
@@ -14,34 +13,43 @@ div#other-features {
         margin-top: 0;
     }
     
+    td#hoverables div {
+        margin: 0;
+        padding: 0;
+        background: white url("../img/page-6/menu-cut.png") no-repeat;
+        background-size: contain;
+        padding-bottom: 250%;
+        position: relative;
+    }
+    
     /* IMAGE HOVERABLES */
     span.hoverables {
         display: inline-block;
-        width: 18.1%;
+        width: 97%;
         position: absolute;
-        left: 21.5%;
+        left: 0;
         border-color: $text-red;
         border-style: solid;
         border-width: 0px;
         z-index: 2;
         
         &#reports {
-            padding-bottom: 13.7%; // maintain aspect ratio
+            padding-bottom: 75%; // maintain aspect ratio
         }
         
         &#supporters {
-            padding-bottom: 6.7%;
-            top: 106.9%;
+            padding-bottom: 35%;
+            top: 30.8%;
         }
         
         &#profile {
-            padding-bottom: 6.7%;
-            top: 120%;
+            padding-bottom: 35%;
+            top: 45.8%;
         }
         
         &#settings {
-            padding-bottom: 17%;
-            top: 132.9%;
+            padding-bottom: 92.5%;
+            top: 60.8%;
         }
     }
     

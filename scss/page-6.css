@@ -1,32 +1,38 @@
 div#other-features {
   /* IMAGE HOVERABLES */ }
   div#other-features table {
-    margin: 0 0%;
-    position: relative; }
+    margin: 0 0%; }
   div#other-features p {
     text-align: left; }
   div#other-features h4 {
     margin-top: 0; }
+  div#other-features td#hoverables div {
+    margin: 0;
+    padding: 0;
+    background: white url("../img/page-6/menu-cut.png") no-repeat;
+    background-size: contain;
+    padding-bottom: 250%;
+    position: relative; }
   div#other-features span.hoverables {
     display: inline-block;
-    width: 18.1%;
+    width: 97%;
     position: absolute;
-    left: 21.5%;
+    left: 0;
     border-color: #c3404c;
     border-style: solid;
     border-width: 0px;
     z-index: 2; }
     div#other-features span.hoverables#reports {
-      padding-bottom: 13.7%; }
+      padding-bottom: 75%; }
     div#other-features span.hoverables#supporters {
-      padding-bottom: 6.7%;
-      top: 106.9%; }
+      padding-bottom: 35%;
+      top: 30.8%; }
     div#other-features span.hoverables#profile {
-      padding-bottom: 6.7%;
-      top: 120%; }
+      padding-bottom: 35%;
+      top: 45.8%; }
     div#other-features span.hoverables#settings {
-      padding-bottom: 17%;
-      top: 132.9%; }
+      padding-bottom: 92.5%;
+      top: 60.8%; }
   div#other-features td#description span {
     display: none;
     position: static;
