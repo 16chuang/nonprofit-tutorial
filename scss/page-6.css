@@ -33,14 +33,17 @@ div#other-features {
     div#other-features span.hoverables#settings {
       padding-bottom: 92.5%;
       top: 60.8%; }
-  div#other-features td#description span {
+  div#other-features span.description {
+    position: absolute;
     display: none;
-    position: static;
+    top: -30px;
+    left: 123%;
+    width: 195%; }
+  div#other-features td#description span#default-description {
     width: auto;
     left: 0;
-    border: none; }
-    div#other-features td#description span#default-description {
-      display: inline-block; }
+    border: none;
+    display: inline-block; }
 
 div#transition {
   padding: 40px 15%; }

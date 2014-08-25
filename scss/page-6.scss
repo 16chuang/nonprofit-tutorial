@@ -53,14 +53,18 @@ div#other-features {
         }
     }
     
-    td#description span {
+    span.description {
+        position: absolute;
         display: none;
-        position: static;
-        width: auto;
-        left: 0;
-        border: none;
-        
-        &#default-description {
+        top: -30px; left: 123%;
+        width: 195%;
+    }
+    
+    td#description {
+        span#default-description {
+            width: auto;
+            left: 0;
+            border: none;
             display: inline-block;
         }
     }

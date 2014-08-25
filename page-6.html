@@ -82,35 +82,38 @@
             <table>
                 <td id="hoverables" style="width: 29%; padding-left:10%; padding-right: 2.5%;">
                     <div>
-                        <span id="reports" class="hoverables"></span>
-                        <span id="supporters" class="hoverables"></span>
-                        <span id="profile" class="hoverables"></span>
-                        <span id="settings" class="hoverables"></span>
+                        <span id="reports" class="hoverables">
+                            <span id="reports-description" class="description">
+                                <p class="p-large">Generate custom, saveable reports on your non-profit’s volunteers and employees.</p>
+                                <p class="p-small">Apply many filters, including by hours volunteered, opportunities attended, and within certain date ranges. If you’d like more detailed or customizable reports, contact the GoVo team at <a class="email-link" href="mailto:nonprofit@govoluntr.com"><strong>nonprofit@govoluntr.com</strong></a>.</p>
+                            </span>
+                        </span>
+                        
+                        <span id="supporters" class="hoverables">
+                            <span id="supporters-description" class="description">
+                                <p class="p-large">View and invite new supporters via email.</p>
+                                <p class="p-small">Alert your supporters of your presence on GoVoluntr, and encourage them to create a free account and check it out!</p>
+                            </span>
+                        </span>
+                        
+                        <span id="profile" class="hoverables">
+                            <span id="profile-description" class="description">
+                                <p class="p-large">View and edit your non-profit’s profile.</p>
+                                <p class="p-small">Edit your profile picture, basic information, mission statement, and more. View links to your employee's profiles and total number of hours volunteered.</p>
+                            </span>
+                        </span>
+                        
+                        <span id="settings" class="hoverables">
+                            <span id="settings-description" class="description">
+                                <p class="p-large">Adjust your email preferences, edit your nonprofit’s employees and affiliates, and upload your 501(c) certificate so GoVo can verify your nonprofit’s status.</p>
+                            </span>
+                        </span>
                     </div>
                 </td>
                 
                 <td id="description" style="vertical-align: top; width: 46%; padding-right: 10%; padding-left: 2.5%;">
                     <span id="default-description">
                         <h4>Hover over a menu element on the left to learn more about it.</h4>
-                    </span>
-                    
-                    <span id="reports-description">
-                        <p class="p-large">Generate custom, saveable reports on your non-profit’s volunteers and employees.</p>
-                        <p class="p-small">Apply many filters, including by hours volunteered, opportunities attended, and within certain date ranges. If you’d like more detailed or customizable reports, contact the GoVo team at <a class="email-link" href="mailto:nonprofit@govoluntr.com"><strong>nonprofit@govoluntr.com</strong></a>.</p>
-                    </span>
-                    
-                    <span id="supporters-description">
-                        <p class="p-large">View and invite new supporters via email.</p>
-                        <p class="p-small">Alert your supporters of your presence on GoVoluntr, and encourage them to create a free account and check it out!</p>
-                    </span>
-                    
-                    <span id="profile-description">
-                        <p class="p-large">View and edit your non-profit’s profile.</p>
-                        <p class="p-small">Edit your profile picture, basic information, mission statement, and more. View links to your employee's profiles and total number of hours volunteered.</p>
-                    </span>
-                    
-                    <span id="settings-description">
-                        <p class="p-large">Adjust your email preferences, edit your nonprofit’s employees and affiliates, and upload your 501(c) certificate so GoVo can verify your nonprofit’s status.</p>
                     </span>
                 </td>
             </table>
@@ -177,37 +180,40 @@
             $("span#reports")
                 .mouseenter(function() {
                     $(this).css( "border-width", "4px");
-                    $("td#description > span").css("display", "none");
+                    $("span.description").css("display", "none");
                     $("span#reports-description").css( "display", "block");
                 });
             
             $("span#supporters")
                 .mouseenter(function() {
                     $(this).css( "border-width", "4px");
-                    $("td#description > span").css("display", "none");
+                    $("span.description").css("display", "none");
                     $("span#supporters-description").css( "display", "block");
                 });
             
             $("span#profile")
                 .mouseenter(function() {
                     $(this).css( "border-width", "4px");
-                    $("td#description > span").css("display", "none");
+                    $("span.description").css("display", "none");
                     $("span#profile-description").css( "display", "block");
                 });
             
             $("span#settings")
                 .mouseenter(function() {
                     $(this).css( "border-width", "4px");
-                    $("td#description > span").css("display", "none");
+                    $("span.description").css("display", "none");
                     $("span#settings-description").css( "display", "block");
                 });
             
             $("span.hoverables")
+                .mouseenter(function() {
+                    $("span#default-description").css("visibility", "hidden");
+                })
                 .mouseleave(function() {
                     $(this).css( "border-width", "0px"); 
-                    $("td#description > span").css("display", "none");
-                    $("span#default-description").css("display", "block");
-                })
+                    $("span.description").css("display", "none");
+                    $("span#default-description").css("visibility", "visible");
+                });
         </script>
     </body>
 </html>
