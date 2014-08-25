@@ -24,63 +24,113 @@ div#image {
   bottom: 0;
   background: white url("../img/page-3/form.png") no-repeat;
   background-size: contain;
-  background-position: center; }
-  div#image div.hover-wrapper {
-    margin: 0;
-    padding: 0;
-    background-color: green;
-    width: 500px; }
-  div#image a {
-    display: block;
+  background-position: center;
+  /* HOVERABLE BOX */
+  /* POPUP BOX */ }
+  div#image span.hover {
     position: absolute;
-    border-style: solid;
-    border-color: #ffc500;
-    border-width: 3px; }
-    div#image a:hover {
-      border-width: 3px; }
-  div#image a#private {
-    width: 40%;
-    height: 4.5%;
-    top: 17.5%;
-    left: 50%; }
-  div#image a#kid-friendly {
-    width: 40%;
-    height: 4.5%;
-    float: right; }
-  div#image a#groups {
-    width: 40%;
-    height: 8.5%;
-    top: 27%;
-    left: 50%; }
-  div#image a.tooltip2 span {
-    float: left;
-    max-width: 300px;
-    padding: 3% 3%;
-    background-color: #f4f4f4;
-    border: solid #a5a5a5 1px;
-    border-radius: 3px;
-    box-shadow: 0px 3px 7px #a5a5a5; }
-    div#image a.tooltip2 span b {
-      display: block;
-      height: 15px;
-      width: 15px;
-      border-right: solid #a5a5a5 1px;
-      border-bottom: solid #a5a5a5 1px;
-      transform: rotate(-45deg);
-      background-color: #f4f4f4;
+    border: #ffc500 solid 4px;
+    border-width: 0px; }
+    div#image span.hover#private {
+      top: 17%;
+      left: 51%;
+      width: 40%;
+      height: 5%; }
+    div#image span.hover#kid-friendly {
+      top: 22.3%;
+      left: 51%;
+      width: 40%;
+      height: 5%; }
+    div#image span.hover#groups {
+      top: 27.8%;
+      left: 51%;
+      width: 40%;
+      height: 7.5%; }
+    div#image span.hover#main-photo {
+      top: 58.8%;
+      left: 8%;
+      width: 39%;
+      height: 5.5%; }
+    div#image span.hover#description {
+      top: 38.4%;
+      left: 51%;
+      width: 40%;
+      height: 18%; }
+    div#image span.hover#time {
+      top: 38.4%;
+      left: 12%;
+      width: 38%;
+      height: 12%; }
+    div#image span.hover#rsvp-limit {
+      top: 74.5%;
+      left: 8%;
+      width: 39%;
+      height: 5.5%; }
+    div#image span.hover#shifts {
+      top: 80.5%;
+      left: 8%;
+      width: 39%;
+      height: 4.5%; }
+    div#image span.hover:hover {
+      border-width: 4px; }
+      div#image span.hover:hover span.popup {
+        display: inline-block; }
+  div#image span.popup {
+    display: none;
+    position: absolute;
+    color: #f1eeee;
+    background-color: rgba(92, 92, 92, 0.95);
+    padding: 2% 5%;
+    width: 100%;
+    z-index: 2;
+    /* TRIANGLE TOOLTIP THINGIE */ }
+    div#image span.popup:after {
+      content: '';
       position: absolute;
-      left: 97.8%;
-      top: 40%; }
-    div#image a.tooltip2 span p {
-      margin: 0;
-      font-size: 1em;
-      line-height: 1.4em;
-      color: #262626; }
-    div#image a.tooltip2 span strong {
+      width: 15px;
+      height: 15px;
+      background: rgba(92, 92, 92, 0.95);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    div#image span.popup.left:after {
+      left: 0%;
+      top: 50%;
+      margin-left: -7.5px;
+      margin-top: -7.5px; }
+    div#image span.popup.right:after {
+      right: 0%;
+      top: 50%;
+      margin-right: -7.5px;
+      margin-top: -7.5px; }
+    div#image span.popup strong {
       font-weight: 600;
       color: #f6b54e; }
-  div#image a.tooltip2:hover span {
-    visibility: visible; }
+    div#image span.popup#private {
+      top: -230%;
+      right: 105%; }
+    div#image span.popup#kid-friendly {
+      top: -110%;
+      right: 105%; }
+    div#image span.popup#groups {
+      top: -110%;
+      right: 105%; }
+    div#image span.popup#main-photo {
+      top: -100%;
+      left: 105%; }
+    div#image span.popup#description {
+      top: 6%;
+      right: 105%; }
+    div#image span.popup#time {
+      top: -60%;
+      left: 105%;
+      width: 105%; }
+    div#image span.popup#rsvp-limit {
+      top: -120%;
+      left: 105%; }
+    div#image span.popup#shifts {
+      top: -225%;
+      left: 105%; }
 
 /* TRANSITION */
 div#transition {

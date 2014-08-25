@@ -33,95 +33,132 @@ div#image {
     background-size: contain;
     background-position: center;
     
-    div.hover-wrapper {
-        margin: 0;
-        padding: 0;
-        background-color: green;
-        width: 500px;
-    }
-    
-    a {
-        display: block;
+    /* HOVERABLE BOX */
+    span.hover {
         position: absolute;
-        border-style: solid;
-        border-color: $text-yellow; 
-        border-width: 3px;
+        border: $text-yellow solid 4px;
+        border-width: 0px;
+        
+        &#private {
+            top: 17%; left: 51%;
+            width: 40%; height: 5%;
+        }
+        
+        &#kid-friendly {
+            top: 22.3%; left: 51%;
+            width: 40%; height: 5%;
+        }
+        
+        &#groups {
+            top: 27.8%; left: 51%;
+            width: 40%; height: 7.5%;
+        }
+        
+        &#main-photo {
+            top: 58.8%; left: 8%;
+            width: 39%; height: 5.5%;
+        }
+        
+        &#description {
+            top: 38.4%; left: 51%;
+            width: 40%; height: 18%;
+        }
+        
+        &#time {
+            top: 38.4%; left: 12%;
+            width: 38%; height: 12%;
+        }
+        
+        &#rsvp-limit {
+            top: 74.5%; left: 8%;
+            width: 39%; height: 5.5%;
+        }
+        
+        &#shifts {
+            top: 80.5%; left: 8%;
+            width: 39%; height: 4.5%;
+        }
         
         &:hover {
-            border-width: 3px;
+            border-width: 4px;
+            span.popup {
+                display: inline-block;
+            }
         }
     }
     
-    a#private {
-        width: 40%;
-        height: 4.5%;
+    /* POPUP BOX */
+    span.popup {
+        display: none;
+        position: absolute;
+        color: $background-gray;
+        background-color: rgba(92, 92, 92, 0.95);
+        padding: 2% 5%;
+        width: 100%;
+        z-index: 2;
         
-        top: 17.5%;
-        left: 50%;
-    }
-    
-    a#kid-friendly {
-        width: 40%;
-        height: 4.5%;
-        float: right;
-    }
-    
-    a#groups {
-        width: 40%;
-        height: 8.5%;
-        
-        top: 27%;
-        left: 50%;
-    }
-    
-    a.tooltip2 span {
-//        position: absolute;
-//        top: -90%;
-//        left: -95%;
-        float: left;
-        
-        max-width: 300px;
-        
-        padding: 3% 3%;
-        
-        background-color: rgb(244, 244, 244);
-        border: solid $text-light-gray 1px;
-        border-radius: 3px;
-        
-        box-shadow: 0px 3px 7px $text-light-gray;
-        
-//        visibility: hidden;
-        
-        b {
-            display: block;
-            height: 15px;
-            width: 15px;
-            border-right: solid $text-light-gray 1px;
-            border-bottom: solid $text-light-gray 1px;
-            transform: rotate(-45deg);
-            background-color: rgb(244, 244, 244);
+        /* TRIANGLE TOOLTIP THINGIE */
+        &:after {
+            content:'';
+            position:absolute;
+            width:15px;
+            height:15px;
+            background: rgba(92, 92, 92, 0.95);
             
-            position: absolute;
-            left: 97.8%;
-            top: 40%;
+            -moz-transform:rotate(45deg);
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
         }
         
-        p {
-            margin: 0;
-            font-size: 1em;
-            line-height: 1.4em;
-            color: $text-gray;
+        &.left:after {
+            left: 0%; top: 50%;
+            margin-left: -7.5px; margin-top: -7.5px;
+        }
+        
+        &.right:after {
+            right: 0%; top: 50%;
+            margin-right: -7.5px; margin-top: -7.5px;
         }
         
         strong {
             font-weight: 600;
             color: $govo-yellow;
         }
+        
+        &#private {
+            top: -230%; right: 105%;
+        }
+        
+        &#kid-friendly {
+            top: -110%; right: 105%;
+        }
+        
+        &#groups {
+            top: -110%; right: 105%;
+        }
+        
+        &#main-photo {
+            top: -100%; left: 105%;
+        }
+        
+        &#description {
+            top: 6%; right: 105%;
+        }
+        
+        &#time {
+            top: -60%; left: 105%;
+            width: 105%;
+        }
+        
+        &#rsvp-limit {
+            top: -120%; left: 105%;
+        }
+        
+        &#shifts {
+            top: -225%; left: 105%;
+        }
     }
     
-    a.tooltip2:hover span {
-        visibility: visible;
-    }
 }
 
 /* TRANSITION */
