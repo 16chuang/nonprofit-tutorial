@@ -1,3 +1,23 @@
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1); }
+
+  50% {
+    -webkit-transform: scale(1.4, 1.4); }
+
+  100% {
+    -webkit-transform: scale(1, 1); } }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1); }
+
+  50% {
+    transform: scale(1.4, 1.4); }
+
+  100% {
+    transform: scale(1, 1); } }
+
 img {
   width: 100%; }
 
@@ -75,6 +95,24 @@ div#image {
       border-width: 4px; }
       div#image span.hover:hover span.popup {
         display: inline-block; }
+      div#image span.hover:hover:after {
+        visibility: hidden; }
+    div#image span.hover:after {
+      visibility: visible;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ffc500;
+      -webkit-animation: pulse 2s linear infinite;
+      animation: pulse 2s linear infinite; }
+    div#image span.hover.right:after {
+      left: 95%; }
+    div#image span.hover.left:after {
+      right: 90%; }
   div#image span.popup {
     display: none;
     position: absolute;
