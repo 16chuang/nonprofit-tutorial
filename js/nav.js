@@ -14,8 +14,9 @@ $(function() {
                 position: 'fixed',
                 'z-index': 10,
                 top: 0,
-                left: nav.offset().left,
-                width: nav.width(),
+//                left: nav.offset().left,
+//                width: 'nav.width()',
+                width: '88%',
                 height: '71px',
                 boxShadow: '0px 2px 10px #E0E0E0'
             });
@@ -30,7 +31,8 @@ $(function() {
             nav.css({
                 position: 'static',
                 boxShadow: 'none',
-                height: '114px'
+                height: '114px',
+                width: '100%'
             });
             isFixed = false;
             nav.removeClass('nav-smaller');
