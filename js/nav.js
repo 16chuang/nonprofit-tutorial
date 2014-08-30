@@ -11,12 +11,12 @@ $(function() {
         var shouldBeFixed = scrollTop > navHomeY;
         if (shouldBeFixed && !isFixed) {
             nav.css({
+                width: '88%',
                 position: 'fixed',
                 'z-index': 10,
                 top: 0,
 //                left: nav.offset().left,
 //                width: 'nav.width()',
-                width: '88%',
                 height: '71px',
                 boxShadow: '0px 2px 10px #E0E0E0'
             });
@@ -29,10 +29,10 @@ $(function() {
         else if (!shouldBeFixed && isFixed)
         {
             nav.css({
+                width: '100%',
                 position: 'static',
                 boxShadow: 'none',
-                height: '114px',
-                width: '100%'
+                height: '114px'
             });
             isFixed = false;
             nav.removeClass('nav-smaller');

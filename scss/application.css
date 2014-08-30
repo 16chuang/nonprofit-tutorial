@@ -65,6 +65,10 @@ span.number, br {
     height: 0;
 */ }
 
+::selection {
+  background-color: #9fbe40;
+  color: white; }
+
 /* COLORING AND BORDER W/ OR W/O HIGHLIGHT */
 #nav a {
   text-decoration: none;

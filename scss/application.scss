@@ -79,6 +79,11 @@ span.number, br {
 */
 }
 
+::selection {
+    background-color: $text-green;
+    color: white;
+}
+
 /* COLORING AND BORDER W/ OR W/O HIGHLIGHT */
 #nav a {
     text-decoration: none;
